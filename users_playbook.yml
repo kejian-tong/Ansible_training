@@ -3,9 +3,5 @@
   roles:
     - role: user_with_editor
       vars:
-        username: jessica01
-        editor: vi
-    - role: user_with_editor
-      vars:
-        username: bob01
-        editor: emacs
+        username: kejian
+        # Note: We're not specifying 'editor' here, so it will default to 'emacs'
