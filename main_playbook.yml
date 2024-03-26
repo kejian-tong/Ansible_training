@@ -4,6 +4,9 @@
     - name: "Create users"
       include_tasks: create.yml
       loop:
-        - jane
-        - jim
-        - jill
+        - username: jane
+          has_readme: yes
+        - username: jim
+          has_readme: no
+        - username: jill
+          has_readme: yes
