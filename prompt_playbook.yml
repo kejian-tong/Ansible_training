@@ -1,0 +1,15 @@
+---
+- name: Create text files on hosts with prompted content
+  hosts: all
+  gather_facts: no
+
+  vars_prompt:
+    - name: file_content
+      prompt: "Please enter the file content"
+      private: no # This ensures that the input is not treated like a password; it will be visible as the user types it.
+
+  tasks:
+    - name: Ensure the text file exists with the desired content
+      ansible.builtin.copy:
+        dest: "{{ filename }}"
+        content: "{{ file_content }}"

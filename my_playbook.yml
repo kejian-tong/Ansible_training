@@ -1,0 +1,10 @@
+---
+- name: Create a text file on the remote system conditionally
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Create the file
+      copy:
+        content: "{{ content }}"
+        dest: "{{ filename }}"
+      when: inventory_hostname == target_host
