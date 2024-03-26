@@ -1,0 +1,7 @@
+---
+# tasks file for invoices
+- name: Create invoice
+  template:
+    src: invoice.j2
+    dest: "invoice_{{ item.name }}.txt"
+  loop: "{{ customers }}"
