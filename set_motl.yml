@@ -1,0 +1,9 @@
+---
+- name: Copy A File to Set MOTD on Server1
+  hosts: Server1
+  become: yes
+  tasks:
+    - name: Copy MOTD file to remote server
+      ansible.builtin.copy:
+        src: /Users/oliver/Desktop/ansible/motd.txt
+        dest: /etc/motd

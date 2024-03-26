@@ -1,0 +1,9 @@
+---
+- name: Retrieve Bitcoin prices
+  hosts: Server1
+  become: no # Assuming the remote user has permission to write to their home directory
+  tasks:
+    - name: Download Bitcoin price data
+      ansible.builtin.get_url:
+        url: https://api.coindesk.com/v1/bpi/currentprice.json
+        dest: ~/btc.json

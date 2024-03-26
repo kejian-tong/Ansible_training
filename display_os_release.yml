@@ -1,0 +1,17 @@
+---
+- name: Display OS, Processor, and Memory Info
+  hosts: all
+  gather_facts: yes
+
+  tasks:
+    - name: Print Distribution Release
+      debug:
+        msg: "The Linux distribution release is: {{ ansible_facts['distribution_release'] }}"
+
+    - name: Print Processor Type
+      debug:
+        msg: "The processor type is: {{ ansible_facts['processor'][0] }}"
+
+    - name: Print Free Memory
+      debug:
+        msg: "The amount of free memory is: {{ ansible_facts['memfree_mb'] }} MB"
