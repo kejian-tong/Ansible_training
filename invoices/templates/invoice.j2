@@ -1,11 +1,11 @@
-Dear {{ item.name }},
+Dear {{item.name}},
 
-Here's the invoice for your all inclusive vacation:
+Here's an overview of your trips:
 
-{{ item.destination }}: From {{ item.start }} to {{ item.end }}
-
-Total cost: {{ item.cost }}
+{% for trip in item.trips %}
+-  {{ trip.destination }}: From {{ trip.start }} to {{ trip.end }}, cost: {{ trip.cost }}
+{% endfor %}
 
 Thank you,
 
-Jinja Travel
+Jinja Travel 

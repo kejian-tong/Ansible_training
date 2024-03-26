@@ -1,18 +1,33 @@
----
-# vars file for invoices
 customers:
   - name: Keanu Reeves
-    destination: Ibiza
-    start: August 1
-    end: August 15
-    cost: 3000 USD
+    trips:
+      - destination: Ibiza
+        start: August 1
+        end: August 15
+        cost: 3000 USD
+      - destination: Tokyo
+        start: September 5
+        end: September 20
+        cost: 4500 USD
+
   - name: Ariana Grande
-    destination: Svalbard
-    start: December 1
-    end: December 3
-    cost: 5000 USD
-  - name: Timothee Chalamet
-    destination: Arrakis
-    start: 10191 AG
-    end: 10194 AG
-    cost: 100 million imperial credits
+    trips:
+      - destination: Svalbard
+        start: December 1
+        end: December 3
+        cost: 5000 USD
+      - destination: New Zealand
+        start: January 10
+        end: January 20
+        cost: 7000 USD
+
+  - name: Kejian Tong
+    trips:
+      - destination: Arrakis
+        start: 10191 AG
+        end: 10194 AG
+        cost: 100 million imperial credits
+      - destination: Giedi Prime
+        start: 10195 AG
+        end: 10197 AG
+        cost: 150 million imperial credits
