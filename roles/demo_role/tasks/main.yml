@@ -1,0 +1,5 @@
+---
+# tasks file for demo_role
+- name: Print a message
+  debug:
+    msg: "Running demo task for {{ansible_host}}"

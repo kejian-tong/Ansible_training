@@ -1,0 +1,11 @@
+---
+- hosts: all
+  roles:
+    - role: user_with_editor
+      vars:
+        username: jessica01
+        editor: vi
+    - role: user_with_editor
+      vars:
+        username: bob01
+        editor: emacs
