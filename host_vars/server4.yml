@@ -1,0 +1,9 @@
+filename: "/tmp/host4_config.json"
+content: |
+  {
+    "configuration": {
+      "setting1": "value1",
+      "setting2": "value2",
+      "features": ["feature1", "feature2", "feature3"]
+    }
+  }

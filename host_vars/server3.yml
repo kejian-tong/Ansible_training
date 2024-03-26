@@ -1,0 +1,8 @@
+filename: "/tmp/host3_document.txt"
+content: |
+  Detailed document for Host 3:
+  - Point A
+  - Point B
+    - Subpoint B1
+    - Subpoint B2
+  - Point C
