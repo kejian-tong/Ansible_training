@@ -1,0 +1,14 @@
+---
+- hosts: all
+  tasks:
+    - name: Show distribution
+      debug:
+        var: ansible_distribution
+    - name: Install using apt
+      when: ansible_distribution == "Ubuntu"
+      apt:
+        name: nano
+    - name: Install using yum
+      when: ansible_distribution == "RedHat"
+      yum:
+        name: nano

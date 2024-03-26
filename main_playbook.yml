@@ -1,0 +1,9 @@
+---
+- hosts: server1
+  tasks:
+    - name: "Create users"
+      include_tasks: create.yml
+      loop:
+        - jane
+        - jim
+        - jill

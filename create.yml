@@ -1,0 +1,15 @@
+# create.yml
+- name: "Creating user {{ item }}"
+  become: yes
+  user:
+    name: "{{ item }}"
+    state: present
+
+- name: "Copy readme for user"
+  become: yes
+  copy:
+    dest: "/home/{{ item }}/readme.txt"
+    content: |
+      Welcome to our server!
+      Here's a little readme.
+    owner: "{{ item }}"
