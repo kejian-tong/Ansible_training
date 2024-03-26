@@ -1,0 +1,8 @@
+---
+- name: Create a text file on the remote system
+  hosts: all
+  tasks:
+    - name: Create the file
+      copy:
+        content: "{{ content }}"
+        dest: "{{ filename }}"
