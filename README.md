@@ -17,12 +17,11 @@ What things you need to install the software and how to install them:
 
 1. Clone this repository to your control node:
 
-```bash
+
 git clone https://github.com/kejian-tong/Ansible_training.git
 
 cd yourproject
 
-```bash
 
 Ensure your Ansible inventory file (/etc/ansible/hosts by default, or another file specified by -i when running ansible-playbook) is up to date with the hosts you intend to target.
 
@@ -30,10 +29,8 @@ Usage
 
 Run the playbook using the following command:
 
-```bash
 ansible-playbook playbook.yml
 
-```bash
 
 Replace playbook.yml with the path to the playbook file if you have stored it in a different location or named it differently.
 
